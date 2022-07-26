@@ -52,7 +52,7 @@ namespace WinFormsApp1
                 //show warning when click redo button data is null(Label)
                 if (redoStack.Count() == 0)
                 {
-                    textwarning.Text = "You can't redo anymore. Please input!";
+                    textwarning.Text = "You can't redo anymore. Please input data!";
                 }
                 else
                 {
