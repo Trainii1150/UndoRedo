@@ -6,6 +6,7 @@ namespace WinFormsApp1
         Stack<String> redoStack = new Stack<String>();
         String tmp;
         String tmpcheck;
+
         public UndoRedo()
         {
             InitializeComponent();
