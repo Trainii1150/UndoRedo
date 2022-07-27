@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textwarning = new System.Windows.Forms.Label();
+            this.labeltousekey = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -74,12 +75,23 @@
             this.textwarning.Size = new System.Drawing.Size(0, 20);
             this.textwarning.TabIndex = 3;
             // 
+            // labeltousekey
+            // 
+            this.labeltousekey.AutoSize = true;
+            this.labeltousekey.ForeColor = System.Drawing.Color.Brown;
+            this.labeltousekey.Location = new System.Drawing.Point(117, 42);
+            this.labeltousekey.Name = "labeltousekey";
+            this.labeltousekey.Size = new System.Drawing.Size(352, 20);
+            this.labeltousekey.TabIndex = 4;
+            this.labeltousekey.Text = "Use Pause Button(Undo) or Use Home Button(Redo)";
+            // 
             // UndoRedo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(568, 474);
+            this.Controls.Add(this.labeltousekey);
             this.Controls.Add(this.textwarning);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -101,5 +113,6 @@
         private Button button1;
         private Button button2;
         private Label textwarning;
+        private Label labeltousekey;
     }
 }

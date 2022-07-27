@@ -75,11 +75,61 @@ namespace WinFormsApp1
                     redoStack.Clear();
                 }
             }
+            else if(e.KeyCode == Keys.Pause)
+            {
+                try
+                {
+                    //show warning when click undo data button is null(Label)
+                    if (stack.Peek() == "")
+                    {
+                        textwarning.Text = "You can't undo anymore. Please input data!";
+                    }
+                    else
+                    {
+
+                        tmp = stack.Peek();
+                        redoStack.Push(tmp);
+                        tmpcheck = redoStack.Peek();
+                        stack.Pop();
+                        textBox1.Text = stack.Peek();
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+            }
+            else if(e.KeyCode == Keys.Home)
+            {
+                try
+                {
+                    //show warning when click redo button data is null(Label)
+                    if (redoStack.Count() == 0)
+                    {
+                        textwarning.Text = "You can't redo anymore. Please input data!";
+                    }
+                    else
+                    {
+                        textBox1.Text = redoStack.Peek();
+                        stack.Push(redoStack.Peek());
+                        redoStack.Pop();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textwarning.Text = "";
         }
+
     }
 }
