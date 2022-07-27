@@ -6,7 +6,6 @@ namespace WinFormsApp1
         Stack<String> redoStack = new Stack<String>();
         String tmp;
         String tmpcheck;
-
         public UndoRedo()
         {
             InitializeComponent();
@@ -26,6 +25,7 @@ namespace WinFormsApp1
                 }
                 else
                 {
+
                     tmp = stack.Peek();
                     redoStack.Push(tmp);
                     tmpcheck = redoStack.Peek();
