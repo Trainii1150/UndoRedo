@@ -27,8 +27,8 @@ namespace WinFormsApp1
                 else
                 {
                     tmp = stack.Peek();
-                    tmpcheck = stack.Peek();
                     redoStack.Push(tmp);
+                    tmpcheck = redoStack.Peek();
                     stack.Pop();
                     textBox1.Text = stack.Peek();
 
