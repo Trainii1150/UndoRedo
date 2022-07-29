@@ -66,7 +66,7 @@ namespace WinFormsApp1
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Space || e.KeyCode == Keys.Decimal)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Space /*|| e.KeyCode == Keys.Decimal*/)
             {
                 stack.Push(textBox1.Text);
                 //if when input new data after undo one time
