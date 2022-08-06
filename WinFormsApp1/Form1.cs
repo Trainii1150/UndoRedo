@@ -4,12 +4,10 @@ namespace WinFormsApp1
     {
         Stack<String> stack = new Stack<String>();
         Stack<String> redoStack = new Stack<String>();
-        String tmp;
         String tmpcheck;
         public UndoRedo()
         {
             InitializeComponent();
-            tmp = "";
             tmpcheck = "";
             stack.Push("");
         }
@@ -26,8 +24,7 @@ namespace WinFormsApp1
                 else
                 {
 
-                    tmp = stack.Peek();
-                    redoStack.Push(tmp);
+                    redoStack.Push(stack.Peek());
                     tmpcheck = redoStack.Peek();
                     stack.Pop();
                     textBox1.Text = stack.Peek();
@@ -87,8 +84,7 @@ namespace WinFormsApp1
                     else
                     {
 
-                        tmp = stack.Peek();
-                        redoStack.Push(tmp);
+                        redoStack.Push(stack.Peek());
                         tmpcheck = redoStack.Peek();
                         stack.Pop();
                         textBox1.Text = stack.Peek();
