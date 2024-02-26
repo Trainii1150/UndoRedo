@@ -1,4 +1,4 @@
-# UndoRedo
+# UndoRedo (Stack)
 Homework GUI Data Structure 
 
 # Preview 1
